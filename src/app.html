@@ -1,0 +1,44 @@
+<template>
+	<lightning-card>
+		<div class="slds-m-around_medium flex" if:true={visible}>
+			
+		<h1 class="slds-text-heading_large">Trazer dados da classe</h1>
+		<div class="content">
+		<p>Nome: &nbsp;{nome}.</p>
+		<p>Telefone: &nbsp;{phone}.</p>
+		<p>CPF: &nbsp;{cpf}.</p>
+		<p>Idade: &nbsp;{age} anos.</p>
+			</div>
+		</div>
+
+		<!-- 
+
+			Crie uma div que tenha outras informações
+			h1 -> Outros dados
+			p  -> Email
+			p  -> Instagram
+			p  -> LinkedIN
+
+		-->
+
+		<div class='flex slds-m-around_medium' if:true={visible}>
+			<h1 class="h1 slds-text-heading_large">Outros dados</h1>
+			<div class="content">
+			<p class="p">Email: &nbsp;{email}</p>
+			<p class="p">Instagram: &nbsp;<a href={insta} target="_blank">@prands</a></p>
+			<p class="p">LinkedIN: &nbsp;<a href={linkedin}>LinkedIN</a></p>
+			<p>Professor na <a href={soulcode} target="_blank">Soulcode Academy.</a></p>
+			<p class="pImg">
+				Veja o bar do Silar
+
+			</p>
+			<img src={bar}/>
+			</div>
+		</div>
+		<div class="buttons">
+<lightning-button variant="success" label="Click to see the Magic" title="Click for Magic" onclick={magic} class="slds-m-left_x-small"></lightning-button>
+		<lightning-button variant="destructive-text" label="Cuidado com este botão!" title="Altera alguns valores" onclick={alteraValores} class="slds-m-left_x-small"></lightning-button>
+		</div>
+		
+	</lightning-card>
+</template>
